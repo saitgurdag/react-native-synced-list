@@ -16,6 +16,7 @@ const SyncedList = ({
   verticalListContainerStyle,
   horizontalListProps,
   verticalListProps,
+  horizontalContainerStyle,
 }: IProps) => {
   const horizontalRef = useRef<FlatList>(null);
   const verticalRef = useRef<SectionList>(null);
@@ -82,6 +83,7 @@ const SyncedList = ({
         setHorizontalPressed={setHorizontalPressed}
         verticalScrollRef={verticalRef}
         horizontalListProps={horizontalListProps}
+        containerStyle={horizontalContainerStyle}
       />
 
       <VerticalList

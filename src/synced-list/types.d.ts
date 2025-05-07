@@ -35,6 +35,7 @@ export interface IProps {
   > | null;
   renderVerticalItem?: (item: any) => JSX.Element;
   verticalListContainerStyle?: StyleProp<ViewStyle>;
+  horizontalContainerStyle?: StyleProp<ViewStyle>;
 }
 
 export interface HorizontalListProps {
