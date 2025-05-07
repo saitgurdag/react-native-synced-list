@@ -72,6 +72,20 @@ const SyncedList = ({
   }, [rendered]);
 
   return (
+    <View>
+      <HorizontalList
+        contentContainerStyle={horizontalListContainerStyle}
+        data={data}
+        onSelect={onSelect}
+        renderHorizontalItem={renderHorizontalItem}
+        scrollRef={horizontalRef}
+        selected={selected}
+        setHorizontalPressed={setHorizontalPressed}
+        verticalScrollRef={verticalRef}
+        horizontalListProps={horizontalListProps}
+        containerStyle={horizontalContainerStyle}
+      />
+
       <VerticalList
         contentContainerStyle={verticalListContainerStyle}
         data={data}
@@ -83,19 +97,9 @@ const SyncedList = ({
         scrollRef={verticalRef}
         selected={selected}
         setSelected={setSelected}
-        verticalListProps={{...verticalListProps, ListHeaderComponent: () => <HorizontalList
-        contentContainerStyle={horizontalListContainerStyle}
-        data={data}
-        onSelect={onSelect}
-        renderHorizontalItem={renderHorizontalItem}
-        scrollRef={horizontalRef}
-        selected={selected}
-        setHorizontalPressed={setHorizontalPressed}
-        verticalScrollRef={verticalRef}
-        horizontalListProps={horizontalListProps}
-        containerStyle={horizontalContainerStyle}
-      />}}
+        verticalListProps={verticalListProps}
       />
+    </View>
   );
 };
 
