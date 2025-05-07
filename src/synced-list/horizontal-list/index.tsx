@@ -19,6 +19,7 @@ const HorizontalList = ({
   setHorizontalPressed,
   verticalScrollRef,
   horizontalListProps,
+  containerStyle,
 }: HorizontalListProps) => {
   const onItemPress = (id: number | string, i: number) => {
     setHorizontalPressed(true);
@@ -71,7 +72,7 @@ const HorizontalList = ({
     horizontalListProps ? horizontalListProps : {};
 
   return (
-    <View style={{}}>
+    <View style={containerStyle ? containerStyle : {}}>
       <View style={styles.container}>
         <FlatList
           bounces={false}

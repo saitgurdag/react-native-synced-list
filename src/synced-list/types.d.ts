@@ -39,6 +39,7 @@ export interface IProps {
 
 export interface HorizontalListProps {
   contentContainerStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
   data: DataItem[];
   onSelect: (id: number | string | null) => void;
   renderHorizontalItem?: (
