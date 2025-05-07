@@ -21,6 +21,7 @@ const VerticalList = ({
   selected,
   setSelected,
   verticalListProps,
+  contentContainerStyle,
 }: VerticalListProps) => {
   const onViewableItemsChanged = ({
     viewableItems,
@@ -102,7 +103,10 @@ const VerticalList = ({
 
   return (
     <SectionList
-      contentContainerStyle={styles.contentContainerStyle}
+      contentContainerStyle={ contentContainerStyle
+              ? [styles.contentContainerStyle, contentContainerStyle]
+              : styles.contentContainerStyle
+         }
       initialNumToRender={40}
       keyExtractor={keyExtractor}
       onScrollToIndexFailed={() => {
